@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://kit.fontawesome.com/804d7da4bf.js" crossorigin="anonymous"></script>
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <link href="~/content/site.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-sm" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class=" nav-link active">
+                            <a asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-link"><a asp-controller="News" asp-action="Index">News</a></li>
+                        <li class="nav-link"><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+                        <li class="nav-link"><a asp-controller="About" asp-action="Index">About</a></li>
+
+
+                    </ul>
+                </div>
+                
+               
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>
+
