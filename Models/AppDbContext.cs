@@ -15,7 +15,31 @@ namespace GoldfishClub.Models
 
         }
 
-        
+        public DbSet<Blog> Blogs { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            //seed blogs
+            modelBuilder.Entity<Blog>().HasData(new Blog
+            {
+                BlogId = 1,
+                BlogPath = "~/Views/Blog/January/JanuaryBlog.cshtml"
+            });
+
+            modelBuilder.Entity<Blog>().HasData(new Blog
+            {
+                BlogId = 2,
+                BlogPath = "~/Views/Blog/February/FebruaryBlog.cshtml"
+            });
+
+            modelBuilder.Entity<Blog>().HasData(new Blog
+            {
+                BlogId = 3,
+                BlogPath = "~/Views/Blog/March/MarchBlog.cshtml"
+            });
+        }
 
     }
 }

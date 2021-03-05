@@ -28,6 +28,7 @@ namespace GoldfishClub
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
+            services.AddScoped<IBlogRepository, BlogRepository>();
 
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
