@@ -8,6 +8,7 @@
 
 h1{
     color: #2c5bc0;
+   
 }
 
 h2, p{
@@ -20,8 +21,15 @@ h3 {
 }
 
 body {
-    padding-top: 100px;
     background-color: rgb(229, 229, 240);
+
+}
+
+.container{
+    padding-left: 150px;
+    padding-top: 40px;
+    padding-right: 50px;
+    padding-bottom: 50px;
 }
 
 .about-icons{
@@ -32,9 +40,13 @@ ul li{
 }
 .slide-image {
     width: 100%;
+    margin: auto;
+    
 }
 
 .carousel-holder {
+   
+    margin-top: 50px;
     margin-bottom: 30px;
 }
 
@@ -43,8 +55,8 @@ ul li{
     border-radius: 4px;
 }
 
-caption {
-    height: 130px;
+.carousel-caption {
+    height: 200px;
     overflow: hidden;
 }
 
@@ -57,12 +69,17 @@ footer {
 }
 
 .navbar {
-    background-image: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    z-index: 1;
+    width:15%;
+    height: 100%;
+    position: fixed; 
+}
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navbar-inverse {
@@ -73,8 +90,19 @@ footer {
 .nav a{
     color: white;
     font-size: 1.2em;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 8px 16px;
+}
+
+.navbar-nav ul li a {
+    color: white;
+    font-size: 1.2em;
+    padding: 8px 16px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
 }
 
 
@@ -83,10 +111,10 @@ footer {
 }
 
 .item img {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
-    min-height: 400px;
+    min-height: 300px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
